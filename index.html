@@ -132,18 +132,18 @@
     <!-- Title Screen -->
     <div id="title-screen" class="screen active">
         <img src="your-game-title.gif" alt="Game Title" class="mb-10">
-        <img src="your-start-button.gif" alt="Start Button" class="cursor-pointer" onclick="showScreen('instruction-screen')">
+        <img src="Button.gif" alt="Start Button" class="cursor-pointer" onclick="showScreen('instruction-screen')">
     </div>
 
     <!-- Instruction Screen -->
     <div id="instruction-screen" class="screen">
         <img src="your-instruction.gif" alt="Instructions" class="mb-10">
-        <img src="your-start-button.gif" alt="Start Game" class="cursor-pointer" onclick="startGame()">
+        <img src="Start button.gif" alt="Start Game" class="cursor-pointer" onclick="startGame()">
     </div>
 
     <!-- Coin Collection Game Screen -->
     <div id="game-screen" class="screen">
-        <img src="your-countdown.gif" alt="Countdown" class="countdown">
+        <img src="Timer.gif" alt="Countdown" class="countdown">
         <div id="coin-container"></div>
     </div>
 
@@ -154,21 +154,21 @@
         
         <div class="flex flex-wrap justify-center max-w-4xl">
             <div class="item">
-                <img src="your-tempelan.gif" alt="Tempelan">
+                <img src="Untitled 05-25-2025 05-02-23.gif" alt="Tempelan">
                 <div class="item-name">Tempelan</div>
                 <div class="item-price">10 Coins</div>
                 <button class="buy-button" onclick="buyItem('tempelan', 10)">Buy</button>
             </div>
             
             <div class="item">
-                <img src="your-pinata.gif" alt="Pinata">
+                <img src="pinãta.gif" alt="Pinata">
                 <div class="item-name">Pinata</div>
                 <div class="item-price">20 Coins</div>
                 <button class="buy-button" onclick="buyItem('pinata', 20)">Buy</button>
             </div>
             
             <div class="item">
-                <img src="your-balon.gif" alt="Balon">
+                <img src="Balloons.gif" alt="Balon">
                 <div class="item-name">Balon</div>
                 <div class="item-price">15 Coins</div>
                 <button class="buy-button" onclick="buyItem('balon', 15)">Buy</button>
@@ -192,7 +192,7 @@
 
     <!-- Envelope Screen -->
     <div id="envelope-screen" class="screen">
-        <img src="your-envelope.gif" alt="Envelope" class="envelope cursor-pointer" onclick="showScreen('message-screen')">
+        <img src="Envelope.gif" alt="Envelope" class="envelope cursor-pointer" onclick="showScreen('message-screen')">
         <p class="mt-4 text-xl">Click the envelope to open</p>
     </div>
 
@@ -271,7 +271,7 @@
         function spawnCoin() {
             const coinContainer = document.getElementById('coin-container');
             const coin = document.createElement('img');
-            coin.src = 'your-coin.gif';
+            coin.src = 'Coin.gif';
             coin.alt = 'Coin';
             coin.classList.add('coin');
             
@@ -349,19 +349,19 @@
             let gifSrc = '';
             
             if (purchasedItems.tempelan && purchasedItems.pinata && purchasedItems.balon) {
-                gifSrc = 'your-all-three-items.gif';
+                gifSrc = 'Lengkap.gif';
             } else if (purchasedItems.tempelan && purchasedItems.pinata) {
-                gifSrc = 'your-tempelan-pinata.gif';
+                gifSrc = 'Tempel n pinata.gif';
             } else if (purchasedItems.tempelan && purchasedItems.balon) {
-                gifSrc = 'your-tempelan-balon.gif';
+                gifSrc = 'Tempel n balon.gif';
             } else if (purchasedItems.pinata && purchasedItems.balon) {
-                gifSrc = 'your-pinata-balon.gif';
+                gifSrc = 'Pinata n balon.gif';
             } else if (purchasedItems.tempelan) {
-                gifSrc = 'your-tempelan-only.gif';
+                gifSrc = 'Tempel doang.gif';
             } else if (purchasedItems.pinata) {
-                gifSrc = 'your-pinata-only.gif';
+                gifSrc = 'Pinata doang.gif';
             } else if (purchasedItems.balon) {
-                gifSrc = 'your-balon-only.gif';
+                gifSrc = 'Balon doang.gif';
             } else {
                 // No items purchased
                 itemsDisplay.innerHTML = `
